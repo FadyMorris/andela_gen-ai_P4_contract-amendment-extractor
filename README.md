@@ -24,16 +24,16 @@ id: 9c7887ba-a979-4c1e-bf40-557121f95cf3
 ---
 graph TD;
 	__start__([<p>__start__</p>]):::first
-	parse_contract_image_worker_original("parse_contract_image_worker(original)")
-	parse_contract_image_worker_amended("parse_contract_image_worker(amended)")
-	agent_contextualize(agent_contextualize)
-	agent_extract_changes(agent_extract_changes)
+	parse_contract_image_worker_original("parse_contract_image_worker(original)<br>Anthropic Claude Haiku 4.5")
+	parse_contract_image_worker_amended("parse_contract_image_worker(amended)<br>Anthropic Claude Haiku 4.5")
+	agent_contextualize("agent_contextualize<br> OpenAI GPT 4o Mini")
+	agent_extract_changes("agent_extract_changes<br> OpenAI GPT 4o Mini")
 	__end__([<p>__end__</p>]):::last
 	__start__ -.-> parse_contract_image_worker_original;
 	__start__ -.-> parse_contract_image_worker_amended;
-	agent_contextualize --> agent_extract_changes;
-	parse_contract_image_worker_original --> agent_contextualize;
-	parse_contract_image_worker_amended --> agent_contextualize;
+	parse_contract_image_worker_original -- Markdown Extraction --> agent_contextualize;
+	parse_contract_image_worker_amended -- Markdown Extraction --> agent_contextualize;
+	agent_contextualize -- Structure / Corresponding Sec. --> agent_extract_changes;
 	agent_extract_changes --> __end__;
 	classDef default fill:#f2f0ff,line-height:1.2
 	classDef first fill-opacity:0
@@ -57,21 +57,24 @@ graph TD;
 	__start__([<p>__start__</p>]):::first
     subgraph run_extractor_subgraph["run_extractor_subgraph"]
         direction TB
-	    parse_contract_image_worker_original("parse_contract_image_worker(original)")
-	    parse_contract_image_worker_amended("parse_contract_image_worker(amended)")
-	    agent_contextualize(agent_contextualize)
-	    agent_extract_changes(agent_extract_changes)
-	    agent_contextualize --> agent_extract_changes;
-	    parse_contract_image_worker_original --> agent_contextualize;
-	    parse_contract_image_worker_amended --> agent_contextualize;
+	    parse_contract_image_worker_original("parse_contract_image_worker(original)<br>Anthropic Claude Haiku 4.5")
+	    parse_contract_image_worker_amended("parse_contract_image_worker(amended)<br>Anthropic Claude Haiku 4.5")
+	    agent_contextualize("agent_contextualize<br> OpenAI GPT 4o Mini")
+	    agent_extract_changes("agent_extract_changes<br> OpenAI GPT 4o Mini")
+	    parse_contract_image_worker_original -- Markdown Extraction --> agent_contextualize;
+	    parse_contract_image_worker_amended -- Markdown Extraction --> agent_contextualize;
+	    agent_contextualize -- Structure / Corresponding Sec. --> agent_extract_changes;
     end
-	get_embeddings(get_embeddings)
-	calculate_text_extraction_accuracy(calculate_text_extraction_accuracy)
+	get_embeddings("get_embeddings</br> OpenAI text-embedding-3-small")
+	calculate_text_extraction_accuracy("calculate_text_extraction_accuracy<br>Cosine Similarity")
 	__end__([<p>__end__</p>]):::last
-	__start__ --> run_extractor_subgraph;
-	get_embeddings --> calculate_text_extraction_accuracy;
-	run_extractor_subgraph --> get_embeddings;
-	calculate_text_extraction_accuracy --> __end__;
+%%	__start__ --> run_extractor_subgraph;
+	__start__ -.-> parse_contract_image_worker_original;
+	__start__ -.-> parse_contract_image_worker_amended;
+%%	run_extractor_subgraph --> get_embeddings;
+	agent_extract_changes --> get_embeddings;
+	get_embeddings -- Embedding Vectors --> calculate_text_extraction_accuracy;
+	calculate_text_extraction_accuracy -- Text Extraction Accuracy Score --> __end__;
 	classDef default fill:#f2f0ff,line-height:1.2
 	classDef first fill-opacity:0
 	classDef last fill:#bfb6fc
