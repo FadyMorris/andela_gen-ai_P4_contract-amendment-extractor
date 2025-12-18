@@ -1,0 +1,24 @@
+# Core dependencies
+python-dotenv==1.0.0
+pydantic==2.5.0
+
+# LangChain and LLM integrations
+langchain==0.1.16
+langchain-anthropic==0.1.15
+langchain-openai==0.1.8
+langgraph==0.0.41
+
+# Vision and multimodal support
+Pillow==10.1.0
+
+# Tracing and observability
+langfuse==2.33.0
+
+# Syntax highlighting for JSON output
+Pygments==2.17.2
+
+# Data processing
+numpy==1.24.3
+
+# IPython display utilities (included with Jupyter, but explicit for notebooks)
+ipython==8.18.1

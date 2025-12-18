@@ -1,0 +1,76 @@
+# 1. PARTIES
+
+This Service Agreement (“Agreement”) is entered into as of January 1,
+2024, between TechCorp Solutions Inc., a corporation registered in
+Delaware (“Service Provider”), and ClientCo International Limited, a
+corporation registered in New York (“Client”).
+
+# 2. SERVICES
+
+Service Provider agrees to provide the following services (“Services”):
+
+- Software development and maintenance
+
+- Technical support during extended hours (8 AM - 8 PM EST, including
+  weekends)
+
+- Quarterly business reviews
+
+- Monthly reporting on service metrics
+
+- 24/7 emergency hotline support
+
+# 3. TERM
+
+This Agreement shall commence on January 1, 2024, and shall continue for
+a period of twenty-four (24) months (“Initial Term”), unless terminated
+earlier in accordance with the provisions hereof.
+
+# 4. COMPENSATION
+
+Client shall pay Service Provider a monthly fee of $65,000 USD, due on
+the first day of each calendar month. Payment shall be made via wire
+transfer or ACH to the account designated by Service Provider. An annual
+cost-of-living adjustment of 3% shall apply starting Year 2.
+
+# 5. CONFIDENTIALITY
+
+Both parties agree to maintain the confidentiality of all proprietary
+information disclosed by the other party. This obligation shall survive
+termination of this Agreement for a period of five (5) years.
+
+# 6. LIABILITY
+
+Service Provider’s total liability under this Agreement shall not exceed
+the fees paid by Client in the twenty-four (24) months preceding the
+claim. Service Provider shall not be liable for any indirect,
+incidental, special, or consequential damages. Notwithstanding the
+foregoing, neither party shall be liable for damages arising from force
+majeure events.
+
+# 7. TERMINATION
+
+Either party may terminate this Agreement with thirty (30) days’ written
+notice for convenience. Termination for cause may be exercised
+immediately upon written notice. Upon termination, Service Provider
+shall deliver all work product and transition services within fifteen
+(15) days.
+
+# 8. INTELLECTUAL PROPERTY
+
+All work product created by Service Provider under this Agreement shall
+be owned by Client upon full payment of applicable fees. Service
+Provider retains the right to use generalized methodologies and
+pre-existing tools developed prior to this engagement.
+
+# 9. GOVERNING LAW
+
+This Agreement shall be governed by and construed in accordance with the
+laws of the State of Delaware, without regard to its conflict of law
+principles. Any disputes shall be resolved through binding arbitration.
+
+# 10. ENTIRE AGREEMENT
+
+This Agreement constitutes the entire agreement between the parties and
+supersedes all prior negotiations, representations, and agreements,
+whether written or oral.
